@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Radici Quadrate - Matematica Terza Media</title>
+    <!-- Collegamento al foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Intestazione principale della lezione -->
+    <header>
+        <h1>Le Radici Quadrate</h1>
+        <p class="sottotitolo">Scopriamo l'operazione inversa dell'elevamento al quadrato.</p>
+    </header>
+
+    <main>
+        <!-- SEZIONE 1: Concetto base -->
+        <section class="scheda">
+            <h2>1. Che cos'è la radice quadrata?</h2>
+            <p>La radice quadrata è l'operazione inversa dell'elevamento alla seconda (al quadrato).</p>
+            <p>Calcolare la radice quadrata di un numero significa trovare quel numero positivo che, moltiplicato per se stesso, dà il numero di partenza.</p>
+            <div class="esempio">
+                <strong>Esempio:</strong> $\sqrt{25} = 5$ perché $5^2 = 5 \times 5 = 25$.<br>
+                Il simbolo $\sqrt{\phantom{x}}$ si chiama <strong>segno di radice</strong>, mentre il numero dentro (25) si chiama <strong>radicando</strong>.
+            </div>
+        </section>
+
+        <!-- SEZIONE 2: Quadrati perfetti -->
+        <section class="scheda">
+            <h2>2. I quadrati perfetti</h2>
+            <p>Un numero si dice <strong>quadrato perfetto</strong> se la sua radice quadrata è un numero intero esatto.</p>
+            <p>Conoscere a memoria i primi quadrati perfetti ti aiuta a risolvere gli esercizi molto più velocemente.</p>
+            <div class="esempio">
+                <strong>I primi 10 quadrati perfetti:</strong><br>
+                1, 4, 9, 16, 25, 36, 49, 64, 81, 100.<br>
+                <em>Esempio:</em> $\sqrt{64} = 8$ (esatto). Invece $\sqrt{10} \approx 3,16$ (non è un quadrato perfetto).
+            </div>
+        </section>
+
+        <!-- SEZIONE 3: Proprietà delle radici -->
+        <section class="scheda">
+            <h2>3. Le due proprietà fondamentali</h2>
+            <p>Le radici quadrate vanno d'accordo con la moltiplicazione e la divisione, ma <strong>non</strong> con l'addizione e la sottrazione!</p>
+            <ul>
+                <li><strong>Prodotto:</strong> $\sqrt{a \times b} = \sqrt{a} \times \sqrt{b}$</li>
+                <li><strong>Quoziente:</strong> $\sqrt{a : b} = \sqrt{a} : \sqrt{b}$</li>
+            </ul>
+            <div class="esempio">
+                <strong>Esempio corretto:</strong> $\sqrt{4 \times 9} = \sqrt{4} \times \sqrt{9} = 2 \times 3 = 6$ (infatti $\sqrt{36} = 6$).<br>
+                <strong>Attenzione all'errore:</strong> $\sqrt{9 + 16} = \sqrt{25} = 5$, che è diverso da $\sqrt{9} + \sqrt{16} = 3 + 4 = 7$!
+            </div>
+        </section>
+
+        <!-- SEZIONE 4: Radice di una frazione -->
+        <section class="scheda">
+            <h2>4. Radice quadrata di una frazione</h2>
+            <p>Per calcolare la radice quadrata di una frazione, basta calcolare separatamente la radice del numeratore e quella del denominatore.</p>
+            <div class="esempio">
+                <strong>Esempio:</strong> $\sqrt{\frac{49}{81}} = \frac{\sqrt{49}}{\sqrt{81}} = \frac{7}{9}$.
+            </div>
+        </section>
+
+        <!-- ESERCIZIO GUIDATO CON SOLUZIONE A COMPARSA -->
+        <section class="scheda box-esercizio">
+            <h2>Mettiti alla prova: Esercizio</h2>
+            <p>Calcola il valore della seguente espressione applicando le proprietà delle radici:</p>
+            <p class="testo-problema">$\sqrt{100 \times 4} + \sqrt{\frac{36}{9}} = \text{?}$</p>
+            
+            <button id="btn-soluzione" onclick="mostraSoluzione()">Mostra la soluzione</button>
+            
+            <div id="box-soluzione" class="nascosto">
+                <p><strong>Svolgimento passo passo:</strong></p>
+                <ol>
+                    <li>Applichiamo la proprietà del prodotto: $\sqrt{100 \times 4} = \sqrt{100} \times \sqrt{4} = 10 \times 2 = 20$.</li>
+                    <li>Calcoliamo la radice della frazione: $\sqrt{\frac{36}{9}} = \frac{\sqrt{36}}{\sqrt{9}} = \frac{6}{3} = 2$.</li>
+                    <li>Sommiamo i due risultati: $20 + 2 = \mathbf{22}$.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- QUIZ A SCELTA MULTIPLA -->
+      <!-- QUIZ A SCELTA MULTIPLA -->
+        <section class="scheda box-quiz">
+            <h2>Quiz di verifica</h2>
+            <p>Rispondi alle 9 domande e controlla il tuo punteggio finale.</p>
+
+            <form id="form-quiz">
+                <!-- Domanda 1 -->
+                <div class="domanda">
+                    <p><strong>1. Quanto vale $\sqrt{144}$?</strong></p>
+                    <label><input type="radio" name="q1" value="0"> $\sqrt{72}$</label>
+                    <label><input type="radio" name="q1" value="1"> $12$</label>
+                    <label><input type="radio" name="q1" value="0"> $\sqrt{14}$</label>
+                </div>
+
+                <!-- Domanda 2 -->
+                <div class="domanda">
+                    <p><strong>2. Quale scrittura rappresenta un numero NON intero?</strong></p>
+                    <label><input type="radio" name="q2" value="0"> $\sqrt{49}$</label>
+                    <label><input type="radio" name="q2" value="0"> $\sqrt{121}$</label>
+                    <label><input type="radio" name="q2" value="1"> $\sqrt{50}$</label>
+                </div>
+
+                <!-- Domanda 3 -->
+                <div class="domanda">
+                    <p><strong>3. Quanto vale $\sqrt{9 + 16}$?</strong></p>
+                    <label><input type="radio" name="q3" value="1"> $\sqrt{25} = 5$</label>
+                    <label><input type="radio" name="q3" value="0"> $\sqrt{9} + \sqrt{16}$</label>
+                    <label><input type="radio" name="q3" value="0"> $\sqrt{169}$</label>
+                </div>
+
+                <!-- Domanda 4 -->
+                <div class="domanda">
+                    <p><strong>4. L'area di un quadrato è $81\text{ cm}^2$. Come si scrive la misura del lato?</strong></p>
+                    <label><input type="radio" name="q4" value="0"> $\sqrt{81 : 4}\text{ cm}$</label>
+                    <label><input type="radio" name="q4" value="1"> $\sqrt{81}\text{ cm} = 9\text{ cm}$</label>
+                    <label><input type="radio" name="q4" value="0"> $\sqrt{81 \times 4}\text{ cm}$</label>
+                </div>
+
+                <!-- Domanda 5 -->
+                <div class="domanda">
+                    <p><strong>5. Quanto vale $\sqrt{225}$?</strong></p>
+                    <label><input type="radio" name="q5" value="0">$14$</label>
+                    <label><input type="radio" name="q5" value="1">$15$</label>
+                    <label><input type="radio" name="q5" value="0">$25$</label>
+                </div>
+
+                <!-- Domanda 6 -->
+                <div class="domanda">
+                    <p><strong>6. Quale tra questi è un quadrato perfetto?</strong></p>
+                    <label><input type="radio" name="q6" value="1">$64$</label>
+                    <label><input type="radio" name="q6" value="0">$20$</label>
+                    <label><input type="radio" name="q6" value="0">$30$</label>
+                </div>
+
+                <!-- Domanda 7 -->
+                <div class="domanda">
+                    <p><strong>7. Quanto vale $\sqrt{4 \times 25}$?</strong></p>
+                    <label><input type="radio" name="q7" value="1">$10$</label>
+                    <label><input type="radio" name="q7" value="0">$20$</label>
+                    <label><input type="radio" name="q7" value="0">$100$</label>
+                </div>
+
+                <!-- Domanda 8 -->
+                <div class="domanda">
+                    <p><strong>8. Quanto vale $\sqrt{\frac{16}{25}}$?</strong></p>
+                    <label><input type="radio" name="q8" value="1">$\frac{4}{5}$</label>
+                    <label><input type="radio" name="q8" value="0">$\frac{8}{5}$</label>
+                    <label><input type="radio" name="q8" value="0">$\frac{16}{5}$</label>
+                </div>
+
+                <!-- Domanda 9 -->
+                <div class="domanda">
+                    <p><strong>9. Quale uguaglianza è corretta?</strong></p>
+                    <label><input type="radio" name="q9" value="0">$\sqrt{9 + 16} = \sqrt{9} + \sqrt{16}$</label>
+                    <label><input type="radio" name="q9" value="1">$\sqrt{36} = \sqrt{4 \times 9} = 6$</label>
+                    <label><input type="radio" name="q9" value="0">$\sqrt{81} = 8$</label>
+                </div>
+
+                <button type="button" onclick="calcolaPunteggio()">Verifica risposte</button>
+                <button type="button" id="btn-riprova" class="nascosto" onclick="resettaQuiz()">Riprova il quiz</button>
+            </form>
+
+            <!-- Qui apparirà il risultato del quiz -->
+            <div id="risultato-quiz" class="nascosto"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Materiale didattico di Matematica • Classe Terza Media</p>
+    </footer>
+
+    <!-- Caricamento del file con il glossario per i giochi futuri -->
+    <script src="parole.js"></script>
+
+    <!-- Script per la gestione dell'esercizio e del quiz -->
+    <script>
+        // Funzione per mostrare o nascondere la soluzione dell'esercizio
+        function mostraSoluzione() {
+            const box = document.getElementById("box-soluzione");
+            const btn = document.getElementById("btn-soluzione");
+            
+            if (box.classList.contains("nascosto")) {
+                box.classList.remove("nascosto");
+                btn.textContent = "Nascondi la soluzione";
+            } else {
+                box.classList.add("nascosto");
+                btn.textContent = "Mostra la soluzione";
+            }
+        }
+
+        // Funzione per calcolare il punteggio del quiz
+        function calcolaPunteggio() {
+            const domande = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9"];
+            let punteggio = 0;
+            let risposteDate = 0;
+
+            // Controlla ogni domanda
+            domande.forEach(nomeDomanda => {
+                const selezionata = document.querySelector(`input[name="${nomeDomanda}"]:checked`);
+                if (selezionata) {
+                    risposteDate++;
+                    punteggio += parseInt(selezionata.value);
+                }
+            });
+
+            const boxRisultato = document.getElementById("risultato-quiz");
+            boxRisultato.classList.remove("nascosto");
+
+            // Verifica che lo studente abbia risposto a tutte le domande
+            if (risposteDate < domande.length) {
+                boxRisultato.innerHTML = "⚠️ <strong>Attenzione:</strong> rispondi a tutte e 9 le domande prima di verificare!";
+                boxRisultato.className = "avviso";
+                return;
+            }
+
+            // Mostra il messaggio in base al punteggio ottenuto
+            let messaggio = `Hai totalizzato <strong>${punteggio} su ${domande.length}</strong>! `;
+            if (punteggio === domande.length) {
+                messaggio += "Ottimo lavoro, hai capito tutto alla perfezione! 🌟";
+                boxRisultato.className = "successo";
+            } else if (punteggio >= 2) {
+                messaggio += "Buon risultato, ma rileggi bene le regole per non fare errori. 👍";
+                boxRisultato.className = "medio";
+            } else {
+                messaggio += "Rileggi con calma la lezione e riprova! 💪";
+                boxRisultato.className = "avviso";
+            }
+
+            boxRisultato.innerHTML = messaggio;
+        }
+
+        // Piccola verifica in console per confermare che parole.js sia collegato
+        console.log("Parole chiave caricate per i giochi:", paroleChiave.length);
+    </script>
+
+    <!-- Libreria leggera per visualizzare bene le formule matematiche (MathJax) -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>voglio caricare su github, mandami il link
+
+ok

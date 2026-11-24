@@ -1,0 +1,201 @@
+/* =========================================================
+   VARIABILI CSS (Modifica qui colori e font per tutto il sito)
+   ========================================================= */
+:root {
+    --sfondo: #f4f7f6;          /* Colore di sfondo della pagina */
+    --testo: #1e293b;           /* Colore principale del testo */
+    --primario: #2563eb;        /* Colore per titoli principali e pulsanti */
+    --accento: #f59e0b;         /* Colore di evidenziazione (bordi, dettagli) */
+    --font-titoli: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    --font-testo: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =========================================================
+   STILI GENERALI E TIPOGRAFIA LEGGIBILE
+   ========================================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--sfondo);
+    color: var(--testo);
+    font-family: var(--font-testo);
+    font-size: 19px;            /* Testo grande per facilitare la lettura in classe */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto 30px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: var(--font-titoli);
+    color: var(--primario);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.sottotitolo {
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+h2 {
+    font-family: var(--font-titoli);
+    color: var(--primario);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--sfondo);
+    padding-bottom: 8px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   SCHEDE DEI CONTENUTI
+   ========================================================= */
+.scheda {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid var(--primario);
+}
+
+.scheda p {
+    margin-bottom: 14px;
+}
+
+.scheda ul, .scheda ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.scheda li {
+    margin-bottom: 8px;
+}
+
+/* Riquadro per gli esempi */
+.esempio {
+    background-color: var(--sfondo);
+    border-left: 4px solid var(--accento);
+    padding: 15px 18px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+/* =========================================================
+   ESERCIZIO E QUIZ INTERATTIVI
+   ========================================================= */
+.box-esercizio {
+    border-left-color: var(--accento);
+}
+
+.testo-problema {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--sfondo);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+button {
+    background-color: var(--primario);
+    color: #ffffff;
+    font-family: var(--font-testo);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#box-soluzione {
+    margin-top: 20px;
+    padding: 18px;
+    background-color: #eff6ff;
+    border: 1px solid var(--primario);
+    border-radius: 8px;
+}
+
+.domanda {
+    margin-bottom: 22px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--sfondo);
+}
+
+.domanda label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.domanda label:hover {
+    background-color: var(--sfondo);
+}
+
+.domanda input[type="radio"] {
+    transform: scale(1.3);
+    margin-right: 10px;
+}
+
+/* Messaggi di feedback del quiz */
+#risultato-quiz {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.15rem;
+}
+
+.successo {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #166534;
+}
+
+.medio {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #92400e;
+}
+
+.avviso {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #991b1b;
+}
+
+/* Classe di utilità per nascondere elementi */
+.nascosto {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
